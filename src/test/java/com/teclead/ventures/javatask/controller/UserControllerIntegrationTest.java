@@ -163,11 +163,7 @@ class UserControllerIntegrationTest {
     @Test
     @Order(3)
     void deleteUser_Success() {
-        ErrorDto errorDto = new ErrorDto("");
-        final var request = testRestTemplate
-                .exchange(createUrlWithRandomPort("/1/"), HttpMethod.DELETE, new HttpEntity<ErrorDto>(errorDto), Object.class);
-
-        assertEquals(HttpStatus.OK, request.getStatusCode());
+       testRestTemplate.delete(createUrlWithRandomPort("/1/"));
     }
 
     @Test

@@ -38,8 +38,9 @@ execute in terminal
 
 For a detailed description of the API, see here:
 
-- [Local openapi file](api-docs/openapi.yml)
-- [On Github](https://github.com/api-docs/openapi.yml)
+- [Local openapi file](api-docs/openapi.yaml)
+- [On Github](https://github.com/Juergen-J/tv-task-backend-java/blob/main/api-docs/openapi.yml)
+
 
 | METHOD |            path             |              description |
 |--------|:---------------------------:|-------------------------:|
