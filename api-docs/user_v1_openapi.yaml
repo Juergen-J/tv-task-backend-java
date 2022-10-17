@@ -22,12 +22,6 @@ paths:
           type: integer
           format: int64
       responses:
-        "404":
-          description: Not Found
-          content:
-            '*/*':
-              schema:
-                $ref: '#/components/schemas/ErrorDto'
         "400":
           description: Bad Request
           content:
@@ -36,6 +30,12 @@ paths:
                 type: object
                 additionalProperties:
                   type: string
+        "404":
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorDto'
         "200":
           description: OK
           content:
@@ -61,12 +61,6 @@ paths:
               $ref: '#/components/schemas/RequestUserDto'
         required: true
       responses:
-        "404":
-          description: Not Found
-          content:
-            '*/*':
-              schema:
-                $ref: '#/components/schemas/ErrorDto'
         "400":
           description: Bad Request
           content:
@@ -75,6 +69,12 @@ paths:
                 type: object
                 additionalProperties:
                   type: string
+        "404":
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorDto'
         "200":
           description: OK
     delete:
@@ -90,12 +90,6 @@ paths:
           type: integer
           format: int64
       responses:
-        "404":
-          description: Not Found
-          content:
-            '*/*':
-              schema:
-                $ref: '#/components/schemas/ErrorDto'
         "400":
           description: Bad Request
           content:
@@ -104,6 +98,12 @@ paths:
                 type: object
                 additionalProperties:
                   type: string
+        "404":
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorDto'
         "200":
           description: OK
   /api/v1/user/:
@@ -119,12 +119,6 @@ paths:
               $ref: '#/components/schemas/RequestUserDto'
         required: true
       responses:
-        "404":
-          description: Not Found
-          content:
-            '*/*':
-              schema:
-                $ref: '#/components/schemas/ErrorDto'
         "400":
           description: Bad Request
           content:
@@ -133,6 +127,12 @@ paths:
                 type: object
                 additionalProperties:
                   type: string
+        "404":
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorDto'
         "201":
           description: Created
           content:
@@ -152,12 +152,6 @@ paths:
         schema:
           type: string
       responses:
-        "404":
-          description: Not Found
-          content:
-            '*/*':
-              schema:
-                $ref: '#/components/schemas/ErrorDto'
         "400":
           description: Bad Request
           content:
@@ -166,12 +160,20 @@ paths:
                 type: object
                 additionalProperties:
                   type: string
+        "404":
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorDto'
         "200":
           description: OK
           content:
             '*/*':
               schema:
-                type: object
+                type: array
+                items:
+                  $ref: '#/components/schemas/ResponseUserDto'
   /api/v1/user/all/:
     get:
       tags:
@@ -179,12 +181,6 @@ paths:
       summary: get all users
       operationId: getAllUsers
       responses:
-        "404":
-          description: Not Found
-          content:
-            '*/*':
-              schema:
-                $ref: '#/components/schemas/ErrorDto'
         "400":
           description: Bad Request
           content:
@@ -193,12 +189,20 @@ paths:
                 type: object
                 additionalProperties:
                   type: string
+        "404":
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorDto'
         "200":
           description: OK
           content:
             '*/*':
               schema:
-                type: object
+                type: array
+                items:
+                  $ref: '#/components/schemas/ResponseUserDto'
 components:
   schemas:
     ErrorDto:

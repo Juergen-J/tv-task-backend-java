@@ -2,6 +2,7 @@
 
 ## Run the service locally
 
+------------
 use commands
 
 - `mvn spring-boot:run`   with port 8080
@@ -17,6 +18,8 @@ or
 Alternatively, you can add `-Dspring.profiles.active=dev` to VM Options and then re-ran that configuration.
 
 ## DOCKER
+
+------------
 
 ### build docker container
 
@@ -36,10 +39,12 @@ execute in terminal
 
 ## API definition
 
+------------
+
 For a detailed description of the API, see here:
 
 - [Local openapi file](api-docs/openapi.yaml)
-- [On Github](https://github.com/Juergen-J/tv-task-backend-java/blob/main/api-docs/openapi.yml)
+- [On Github](https://github.com/Juergen-J/tv-task-backend-java/blob/main/api-docs/user_v1_openapi.yaml)
 
 
 | METHOD |            path             |              description |
@@ -72,7 +77,7 @@ For a detailed description of the API, see here:
 
     []
 
-## VALIDATION
+### VALIDATION
 
 - for the RequestUserDto are following fields required
 
@@ -89,6 +94,7 @@ For a detailed description of the API, see here:
 
 ## SWAGGER
 
+------------
 Start the server open the following link in browser:
 
 - http://localhost:8080/swagger-ui  default
