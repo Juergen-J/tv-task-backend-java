@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd
+      http://www.liquibase.org/xml/ns/pro
+      http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">
+
+    <changeSet id="test-fixtures" author="spring-liquibase">
+        <insert tableName="user_info" schemaName="public">
+            <column name="id" valueSequenceNext="user_id_sequence"/>
+            <column name="name" value="name test user1"/>
+            <column name="vorname" value="vorname test user1"/>
+            <column name="email" value="email@email.com"/>
+        </insert>
+        <insert tableName="user_info" schemaName="public">
+            <column name="id" valueSequenceNext="user_id_sequence"/>
+            <column name="name" value="Jurk"/>
+            <column name="vorname" value="Juergen"/>
+            <column name="email" value="juergen.jurk@email.com"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
