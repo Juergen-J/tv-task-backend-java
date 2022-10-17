@@ -18,8 +18,6 @@ Alternatively, you can add `-Dspring.profiles.active=dev` to VM Options and then
 
 ## DOCKER
 
-------------
-
 ### build docker container
 
 execute in terminal
@@ -37,8 +35,6 @@ execute in terminal
 `docker run --name container-name -e "SPRING_PROFILES_ACTIVE=prod" -p 8081:9000 java-task`
 
 ## API definition
-
-------------
 
 For a detailed description of the API, see here:
 
@@ -93,7 +89,6 @@ For a detailed description of the API, see here:
 
 ## SWAGGER
 
-------------
 Start the server open the following link in browser:
 
 - http://localhost:8080/swagger-ui  default
